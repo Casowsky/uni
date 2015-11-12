@@ -1,0 +1,4 @@
+typedef struct Consortium
+{
+	int array[];
+}Consortium;
