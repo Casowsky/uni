@@ -1,3 +1,5 @@
+#include "Units.h"
+
 typedef struct {
 	Unit* units;
 	int nUnits;

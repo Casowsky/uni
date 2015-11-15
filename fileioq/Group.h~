@@ -1,4 +1,4 @@
 typedef struct {
-	Student* student;
+	Student* students;
 	int nStudents;
 }Group;

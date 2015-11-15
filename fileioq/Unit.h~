@@ -1,4 +1,0 @@
-typedef struct {
-	char name[4];	// 3-letter code and \0
-	float mark;
-}Unit;

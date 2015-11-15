@@ -1,19 +1,17 @@
-void calculateCWA(Group* gr)
+#include <stdio.h>
+#include <stdlib.h>
+#include "mytypes.h"
+
+void calculateCWA(Student* st)
 {
-	Student* st = gr->students;
-	int i,j;
+	int i;
 	float cwa, markSum=0.0, markMax;
 	
-	for(i=0;i<(gr->nStudents);i++)
+	markMax = 100.0*(st->nUnits);
+	for(i=0;i<(st->nUnits);i++)
 	{
-		markMax = 100.0*(st[i].nUnits);
-		for(j=0;j<(st[i].nUnits);j++)
-		{
-			markSum += st[i].units[j].mark;
-		}
-		cwa = 100.0*markSum/markMax;
-		printf("%s:%.2f\n", st[i].name, cwa);
+		markSum += st->units[i].mark;
 	}
-
-	return;
+	cwa = 100.0*markSum/markMax;
+	printf("%s:%.2f\n", st.name, cwa);
 }
