@@ -6,8 +6,8 @@
 void processStudents(FuncPtr calc, Group* gr)
 {
 	int i;
-	for(i=0;i<(gr->nStudents)i++)
+	for(i=0;i<(gr->nStudents);i++)
 	{
-		(*calc)(gr->students[i]);
+		(*calc)(&gr->students[i]);
 	}
 }

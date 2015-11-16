@@ -15,11 +15,12 @@ Group* loadRecords(char* filename)
 		for(i=0;i<(group->nStudents);i++)
 		{
 			fscanf(file, "%d", &group->students[i].nUnits);
-			fgets(group->students[i].name,52,file);
+			/*fgets(group->students[i].name,52,file);*/
+			fscanf(file, "%s", group->students[i].name);
 			group->students[i].units = (Unit*)malloc(group->students[i].nUnits * sizeof(Unit));
 			for(j=0;j<(group->students[i].nUnits);j++)
 			{
-				fscanf(file, "%s %f", group->students[i].units[i].code, &group->students[i].units[i].mark);
+				fscanf(file, "%s %f", group->students[i].units[j].code, &group->students[i].units[j].mark);
 			}
 		}
 

@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 	char* filename = argv[1];
 	Group* studentGroup = loadRecords(filename);
 	void (*FuncPtr)(Student*) = &calculateCWA;
-	processStudents(&calculateCWA, studentGroup);
+	processStudents(FuncPtr, studentGroup);
 
 	return 0;
 }

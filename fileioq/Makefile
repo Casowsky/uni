@@ -6,8 +6,8 @@ CFLAGS = -g -Wall -ansi -pedantic
 $(EXEC): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(EXEC) 
 
-main.o: loadRecords.c calculateCWA.c processStudents.c main.c mytypes.h
-	$(CC) $(CFLAGS) -c loadRecords.c calculateCWA.c processStudents.c main.c -o main.o
+main.o: loadRecords.c calculateCWA.c processStudents.c loadRecords.h calculateCWA.h processStudents.h main.c mytypes.h
+	$(CC) $(CFLAGS) -c loadRecords.c calculateCWA.c processStudents.c main.c
 
 loadRecords.o: loadRecords.c loadRecords.h mytypes.h
 	$(CC) $(CFLAGS) -c loadRecords.c -o loadRecords.o
